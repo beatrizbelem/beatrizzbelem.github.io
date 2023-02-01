@@ -1,0 +1,451 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.page-content {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media (min-width: 800px) {
+  .page-content {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+/* ------------- header -------------- */
+
+header {
+  padding: 20px 0;
+}
+
+@media (min-width: 800px) {
+  header {
+    padding: 40px 0;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+@media (min-width: 800px) {
+  .menu {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.cabecalho {
+  display: flex;
+  gap: 8px;
+}
+
+@media (max-width: 800px) {
+  .cabecalho {
+    margin-top: 40px;
+  }
+}
+
+.cabecalho a {
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+}
+
+@media (max-width: 800px) {
+  .cabecalho a {
+    display: block;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+  }
+}
+
+
+/* ----------principal----------- */
+.hero {
+  padding: 40px 0;
+}
+
+.hero .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (min-width: 800px) {
+  .hero .container {
+    grid-template-columns: 1fr 2fr;
+    gap: 100px;
+  }
+}
+
+.hero-lobo {
+  max-width: 100%;
+  height: auto;
+  display: none;
+}
+
+@media (min-width: 400px) {
+  .hero-lobo {
+    display: block;
+  }
+}
+
+.hero-conteudo {
+  position: relative;
+}
+
+.hero-titulo {
+  font-size: 32px;
+}
+
+@media (min-width: 800px) {
+  .hero-titulo {
+    font-size: 72px;
+  }
+}
+
+.hero-img {
+  position: absolute;
+  top: -10px;
+  left: -35px;
+  z-index: -1;
+}
+
+@media (min-width: 800px) {
+  .hero-img {
+    top: 25px;
+    transform: scale(1.2);
+  }
+}
+
+.hero-localizacao {
+  font-size: 24px;
+  color: #525252;
+}
+
+/* ----------experiencias----------- */
+.experiencias .container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 800px) {
+  .experiencias .container {
+    grid-template-columns: 1fr 2fr;
+    gap: 100px;
+  }
+}
+
+.experiencia-descricao {
+  max-width: 40ch;
+  font-size: 24px;
+  color: #525252;
+}
+
+.experiencia-descricao {
+  max-width: 40ch;
+  margin-bottom: 50px;
+}
+
+.experiencias-titulo {
+  margin: 0;
+  font-size: 48px;
+}
+
+@media (min-width: 800px) {
+  .experiencias-titulo {
+    font-size: 128px;
+    color: #e0e0e0;
+    font-weight: bold;
+    word-break: break-word;
+    text-transform: uppercase;
+  }
+}
+
+.cor-preta {
+  color: black;
+  font-weight: bold;
+}
+
+/* ------- experiencia -------- */
+.experiencia {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  background-color: #f5f5f5;
+  font-size: 14px;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.experiencia-empresa::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 22px;
+  background: linear-gradient(#b6f829, #67dd0a);
+  position: absolute;
+  top: 18px;
+  left: -19px;
+}
+
+.experiencia-empresa {
+  position: relative;
+}
+
+.experiencia-empresa h2 {
+  font-size: 18px;
+}
+
+@media (min-width: 800px) {
+  .experiencia-ano {
+    width: 60px;
+    position: absolute;
+    top: 20px;
+    left: -100px;
+    text-align: right;
+  }
+}
+
+.experiencia-cargo h3 {
+  font-size: 18px;
+}
+
+.habilidades li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 5px;
+  background-color: white;
+  margin: 5px;
+} 
+
+/* -----------FORMAÇÃO ----------- */
+
+.formacao {
+  background-color: #141414;
+}
+
+.formacao .container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 800px) {
+  .formacao .container {
+    grid-template-columns: 1fr 2fr;
+    gap: 100px;
+  }
+}
+
+.formacao-titulo {
+  margin: 0;
+  font-size: 48px;
+  color: #e0e0e0;
+}
+
+@media (min-width: 800px) {
+  .formacao-titulo {
+    font-size: 128px;
+    color: black;
+    font-weight: bold;
+    word-break: break-word;
+    text-transform: uppercase;
+  }
+}
+
+.cor-branca {
+  color: white;
+  font-weight: bold;
+}
+
+.formacao-conteudo p {
+  max-width: 40ch;
+  color: #a3a3a3;
+  font-size: 24px;
+}
+
+.formacao-graduacao {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.formacao-graduacao li {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+}
+
+.graduacao-curso::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(#b6f829, #67dd0a);
+  position: absolute;
+  left: -4px;
+}
+
+.graduacao-tipo {
+  color: #a3a3a3;
+  font-size: 14px;
+}
+
+.graduacao-curso {
+  font-size: 18px;
+  margin-bottom: 40px;
+  flex: 1;
+}
+
+.graduacao-instituicao {
+  font-size: 18px;
+  color: #a3a3a3;
+}
+
+/* -----Cursos------ */
+
+.cor-cinza {
+  color: #8f8f8f;
+}
+
+.titulo-negrito {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.cursos  {
+  margin-top: 50px;
+  position: relative;
+}
+
+.cursos img {
+  transform: translateY(5px);
+}
+
+@media (min-width: 800px) {
+  .cursos img {
+    position: absolute;
+    top: -2px;
+    left: -35px;
+  }
+}
+
+.cursos-habilidades {
+  margin: 20px 0;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* -----------idiomas---------- */
+.idiomas {
+  margin-top: 50px;
+  position: relative;
+}
+
+.idiomas img {
+  transform: translateY(5px);
+}
+
+@media (min-width: 800px) {
+  .idiomas img {
+    position: absolute;
+    top: -2px;
+    left: -35px;
+  }
+}
+
+.idiomas-linguagem {
+  color: white;
+  margin: 20px 0;
+}
+
+/* -----Footer ---------- */
+
+.footer {
+  background-color: black;
+}
+
+.footer .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
+  background-color: black;
+  position: relative;
+}
+
+@media (min-width: 800px) {
+  .footer .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.footer-descricao {
+  justify-content: space-between;
+  font-size: 24px;
+  color: aliceblue;
+}
+
+.footer-descricao p {
+  /* margin: 100px 0; */
+}
+
+.footer-contato {
+  color: aliceblue;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@media (min-width: 800px) {
+  .footer-contato {
+    font-size: 33px;
+  }
+}
+
+.footer-contato h2 {
+  margin: 0;
+}
+
+.footer-contato a {
+  color: white;
+}
+
+
+.footer-detalhe {
+  position: absolute;
+  top: -60px;
+}
